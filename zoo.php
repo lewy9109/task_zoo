@@ -5,8 +5,6 @@ use App\Animals\Name;
 
 require_once('vendor/autoload.php');
 
-
-
 $rabbit = new Rabbit(
     new Name('Tomek')
 );

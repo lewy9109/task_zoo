@@ -6,6 +6,7 @@ namespace App\Animals\Herbivores;
 
 use App\Animals\Animal;
 use App\Animals\Name;
+use App\Animals\TypeOfMeal;
 
 class Rabbit extends Animal
 {
@@ -19,4 +20,8 @@ class Rabbit extends Animal
         );
     }
 
+    public function meal(): TypeOfMeal
+    {
+        return TypeOfMeal::PLANTS;
+    }
 }

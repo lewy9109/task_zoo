@@ -6,5 +6,5 @@ namespace App\Animals;
 
 interface AnimalInterface
 {
-
+    public function meal(): TypeOfMeal;
 }

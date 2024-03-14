@@ -4,6 +4,7 @@ namespace App\Animals\Carnivores;
 
 use App\Animals\Animal;
 use App\Animals\Name;
+use App\Animals\TypeOfMeal;
 
 class SnowIbris extends Animal
 {
@@ -17,4 +18,8 @@ class SnowIbris extends Animal
         );
     }
 
+    public function meal(): TypeOfMeal
+    {
+        return TypeOfMeal::MEAT;
+    }
 }
