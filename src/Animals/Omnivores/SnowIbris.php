@@ -35,6 +35,6 @@ class SnowIbris extends Animal
 
     public function meal(): TypeOfMeal
     {
-        return TypeOfMeal::MEAT;
+        return TypeOfMeal::MIXED;
     }
 }
