@@ -10,10 +10,9 @@ $rabbit = new Rabbit(
     new Name('Tomek')
 );
 
-$meet =  TypeOfMeal::MEAT;
-$plants = TypeOfMeal::PLANTS;
+$porkChop = new \App\Food\PorkChop();
 
 echo  $rabbit;
 
 
-dd($rabbit->feed($plants));
+dd($rabbit->feed($porkChop));

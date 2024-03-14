@@ -1,10 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Animals\Carnivores;
 
 use App\Animals\Animal;
 use App\Animals\Name;
-use App\Animals\TypeOfMeal;
+use App\Food\MealInterface;
+use App\Food\TypeOfMeal;
 use InvalidArgumentException;
 
 class SnowIbris extends Animal
@@ -19,11 +22,11 @@ class SnowIbris extends Animal
         );
     }
 
-    public function feed(TypeOfMeal $meal): string
+    public function feed(MealInterface $meal): string
     {
-        if ($meal !== $this->meal()) {
+        if ($meal->getType() !== $this->meal()) {
             throw new InvalidArgumentException(
-                $this->getFoodErrorMessage(self::SPECIES, $meal)
+                $this->getFoodErrorMessage(self::SPECIES, $meal->getType())
             );
         }
 

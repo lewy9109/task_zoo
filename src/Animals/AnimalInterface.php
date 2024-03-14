@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Animals;
 
+use App\Food\MealInterface;
+
 interface AnimalInterface
 {
-    public function feed(TypeOfMeal $meal): string;
+    public function feed(MealInterface $meal): string;
 }

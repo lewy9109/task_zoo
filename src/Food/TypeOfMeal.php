@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Animals;
+namespace App\Food;
 
 enum TypeOfMeal: string
 {
