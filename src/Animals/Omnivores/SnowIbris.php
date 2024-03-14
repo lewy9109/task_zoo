@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Animals\Carnivores;
+namespace App\Animals\Omnivores;
 
 use App\Animals\Animal;
 use App\Animals\Name;
