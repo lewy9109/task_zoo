@@ -24,4 +24,9 @@ class Name
     {
         return $this->name;
     }
+
+    public function rename(string $newName): self
+    {
+        return new self($newName);
+    }
 }
