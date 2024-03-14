@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace App\Animals\Herbivores;
 
 use App\Animals\Animal;
+use App\Animals\FurInterface;
 use App\Animals\Name;
 use App\Food\TypeOfMeal;
 use App\Food\MealInterface;
 use InvalidArgumentException;
 
-class Rabbit extends Animal
+class Rabbit extends Animal implements FurInterface
 {
     public const SPECIES = 'Rabbit';
 
@@ -36,5 +37,10 @@ class Rabbit extends Animal
     public function meal(): TypeOfMeal
     {
         return TypeOfMeal::PLANTS;
+    }
+
+    public function combFur(): void
+    {
+        echo "The animal has been groomed.";
     }
 }
