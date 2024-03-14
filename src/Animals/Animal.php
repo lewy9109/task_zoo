@@ -23,4 +23,15 @@ abstract class Animal implements AnimalInterface
         );
     }
 
+    protected function getFoodErrorMessage(string $species, TypeOfMeal $meal): string
+    {
+        return sprintf('%s not eat %s', $species, $meal->value);
+    }
+
+    protected function getFoodMessage(): string
+    {
+        return 'Yummy';
+    }
+
+    protected abstract function meal(): TypeOfMeal;
 }

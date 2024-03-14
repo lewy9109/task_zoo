@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Animals;
 
-enum TypeOfMeal
+enum TypeOfMeal: string
 {
-    case MEAT;
-    case PLANTS;
-    case MIXED;
+    case MEAT = 'Meat';
+    case PLANTS = 'Plants';
+    case MIXED = 'Mixed';
 }
