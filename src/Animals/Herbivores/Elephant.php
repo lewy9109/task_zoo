@@ -6,9 +6,7 @@ namespace App\Animals\Herbivores;
 
 use App\Animals\Animal;
 use App\Animals\Name;
-use App\Food\MealInterface;
 use App\Food\TypeOfMeal;
-use InvalidArgumentException;
 
 class Elephant extends Animal
 {

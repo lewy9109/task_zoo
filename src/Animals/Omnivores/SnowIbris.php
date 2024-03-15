@@ -6,9 +6,7 @@ namespace App\Animals\Omnivores;
 
 use App\Animals\Animal;
 use App\Animals\Name;
-use App\Food\MealInterface;
 use App\Food\TypeOfMeal;
-use InvalidArgumentException;
 
 class SnowIbris extends Animal
 {

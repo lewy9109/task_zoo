@@ -8,8 +8,6 @@ use App\Animals\Animal;
 use App\Animals\FurInterface;
 use App\Animals\Name;
 use App\Food\TypeOfMeal;
-use App\Food\MealInterface;
-use InvalidArgumentException;
 
 class Rabbit extends Animal implements FurInterface
 {
@@ -17,6 +15,7 @@ class Rabbit extends Animal implements FurInterface
 
     public function __construct(private readonly Name $name)
     {
+        dd($name);
         parent::__construct(
             $this->name,
             $this->getSpecies()
