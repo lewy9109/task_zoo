@@ -31,6 +31,14 @@ $zoo = new Zoo();
 $zoo->add($rabbit);
 //dump($zoo->toArray());
 
+$zoo->groomAnimals();
+
+try {
+    $zoo->feedAnimals();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+
 $zoo->add($fox);
 //dump($zoo->toArray());
 
