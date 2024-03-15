@@ -6,9 +6,7 @@ namespace App\Animals\Herbivores;
 
 use App\Animals\Animal;
 use App\Animals\Name;
-use App\Food\MealInterface;
 use App\Food\TypeOfMeal;
-use InvalidArgumentException;
 
 class Elephant extends Animal
 {
@@ -18,7 +16,7 @@ class Elephant extends Animal
     {
         parent::__construct(
             $this->name,
-            self::SPECIES
+            $this->getSpecies()
         );
     }
 
@@ -27,14 +25,8 @@ class Elephant extends Animal
         return TypeOfMeal::PLANTS;
     }
 
-    public function feed(MealInterface $meal): string
+    public function getSpecies(): string
     {
-        if ($meal->getType() !== $this->meal()) {
-            throw new InvalidArgumentException(
-                $this->getFoodErrorMessage(self::SPECIES, $meal->getType())
-            );
-        }
-
-        return $this->getFoodMessage();
+        return self::SPECIES;
     }
 }

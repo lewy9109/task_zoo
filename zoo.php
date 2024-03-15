@@ -26,12 +26,20 @@ echo  $rabbit->combFur().PHP_EOL;
 echo $rabbit->feed($lettuce).PHP_EOL;
 
 $zoo = new Zoo();
-dump($zoo->toArray());
+//dump($zoo->toArray());
 
 $zoo->add($rabbit);
-dump($zoo->toArray());
+//dump($zoo->toArray());
+
+$zoo->groomAnimals();
+
+try {
+    $zoo->feedAnimals();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
 
 $zoo->add($fox);
-dump($zoo->toArray());
+//dump($zoo->toArray());
 
-dd($rabbit->feed($lettuce));
+//dd($rabbit->feed($lettuce));

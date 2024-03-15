@@ -9,4 +9,5 @@ use App\Food\MealInterface;
 interface AnimalInterface
 {
     public function feed(MealInterface $meal): string;
+
 }

@@ -6,9 +6,7 @@ namespace App\Animals\Omnivores;
 
 use App\Animals\Animal;
 use App\Animals\Name;
-use App\Food\MealInterface;
 use App\Food\TypeOfMeal;
-use InvalidArgumentException;
 
 class SnowIbris extends Animal
 {
@@ -18,23 +16,17 @@ class SnowIbris extends Animal
     {
         parent::__construct(
             $this->name,
-            self::SPECIES
+            $this->getSpecies()
         );
-    }
-
-    public function feed(MealInterface $meal): string
-    {
-        if ($meal->getType() !== $this->meal()) {
-            throw new InvalidArgumentException(
-                $this->getFoodErrorMessage(self::SPECIES, $meal->getType())
-            );
-        }
-
-        return $this->getFoodMessage();
     }
 
     public function meal(): TypeOfMeal
     {
         return TypeOfMeal::MIXED;
+    }
+
+    public function getSpecies(): string
+    {
+        return self::SPECIES;
     }
 }
