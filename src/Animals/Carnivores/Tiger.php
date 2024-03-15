@@ -18,7 +18,7 @@ class Tiger extends Animal
     {
         parent::__construct(
             $this->name,
-            self::SPECIES
+            $this->getSpecies()
         );
     }
 
@@ -27,14 +27,8 @@ class Tiger extends Animal
         return TypeOfMeal::MEAT;
     }
 
-    public function feed(MealInterface $meal): string
+    public function getSpecies(): string
     {
-        if ($meal->getType() !== $this->meal()) {
-            throw new InvalidArgumentException(
-                $this->getFoodErrorMessage(self::SPECIES, $meal->getType())
-            );
-        }
-
-        return $this->getFoodMessage();
+        return self::SPECIES;
     }
 }

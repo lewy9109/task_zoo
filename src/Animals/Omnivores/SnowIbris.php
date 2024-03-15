@@ -18,23 +18,17 @@ class SnowIbris extends Animal
     {
         parent::__construct(
             $this->name,
-            self::SPECIES
+            $this->getSpecies()
         );
-    }
-
-    public function feed(MealInterface $meal): string
-    {
-        if ($meal->getType() !== $this->meal()) {
-            throw new InvalidArgumentException(
-                $this->getFoodErrorMessage(self::SPECIES, $meal->getType())
-            );
-        }
-
-        return $this->getFoodMessage();
     }
 
     public function meal(): TypeOfMeal
     {
         return TypeOfMeal::MIXED;
+    }
+
+    public function getSpecies(): string
+    {
+        return self::SPECIES;
     }
 }
