@@ -15,7 +15,6 @@ class Rabbit extends Animal implements FurInterface
 
     public function __construct(private readonly Name $name)
     {
-        dd($name);
         parent::__construct(
             $this->name,
             $this->getSpecies()
